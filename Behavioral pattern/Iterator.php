@@ -34,7 +34,7 @@ class AlphabeticalOrderIterator implements Iterator
         $this->reverse = $reverse;
     }
 
-    public function rewind()
+    public function rewind():void
     {
         $this->position = $this->reverse ?
             count($this->collection->getItems()) - 1 : 0;
@@ -50,7 +50,7 @@ class AlphabeticalOrderIterator implements Iterator
         return $this->position;
     }
 
-    public function next()
+    public function next(): void
     {
         $this->position = $this->position + ($this->reverse ? -1 : 1);
     }
