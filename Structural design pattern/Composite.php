@@ -103,7 +103,8 @@ class Composite extends Component
     public function remove(Component $component): void
     {
         $this->children->detach($component);
-        $component->setParent(null);
+        // $component->setParent(null);
+        $component->parent = null;
     }
 
     public function isComposite(): bool
